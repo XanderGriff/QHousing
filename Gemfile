@@ -9,6 +9,7 @@ gem 'jquery-rails', '4.1.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.4.1'
 gem 'bootstrap',    '4.0.0.alpha3'
+gem 'geocoder',     '1.4.1'
 
 group :development, :test do
   gem 'sqlite3', '1.3.12'

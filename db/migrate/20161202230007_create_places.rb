@@ -3,7 +3,7 @@ class CreatePlaces < ActiveRecord::Migration[5.0]
     create_table :places do |t|
       t.string :address
       t.integer :rent
-      t.int :bedrooms
+      t.integer :bedrooms
       t.string :availability
       t.string :link
       t.float :latitude
