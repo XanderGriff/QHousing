@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>QHousing</title>
+    <title>QRent</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <meta name="viewport" content="width=device-width">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2xIjHpu1mq790PK6MmW-pIi8rz4azHf0&callback=initMap" async defer></script>
   </head>
 
   <body>

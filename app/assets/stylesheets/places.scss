@@ -1,3 +1,26 @@
 // Place all the styles related to the Places controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar {
+    height: 40px;
+    position: static;
+    top: 0;
+    left: 0;
+}
+
+.fill {
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}

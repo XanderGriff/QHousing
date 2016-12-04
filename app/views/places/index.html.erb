@@ -1,11 +1,41 @@
-<header><h1 class="display-4">Places</h1></header>
-
-<%= link_to 'Add place', new_place_path, class: 'btn btn-primary btn-lg' %>
-
-<div class="card">
-  <div class="card-block">
-    <ul>
-      <%= render @places %>
-    </ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">QRent</a>
+    </div>
   </div>
+</nav>
+
+<div class='fill'>
+  <div id="map"></div>
 </div>
+
+
+<script>
+  function initMap() {
+    var places = <%= raw(@places.to_json) %>;
+    console.log("*************");
+    console.log(places[0].longitude);
+    console.log("*************");
+    
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 16,
+      center: {lat: 44.2305713, lng: -76.4935186}
+    });
+      
+    for(i=0; i < places.length; i++) {
+      var marker = new google.maps.Marker({
+        position: {lat: places[i].latitude, lng: places[i].longitude},
+        map: map
+      });
+    }
+    
+    marker.addListener('click', function {
+      map.setZoom(8);
+    });
+  }
+  
+  function filter() {
+    
+  }
+</script>
